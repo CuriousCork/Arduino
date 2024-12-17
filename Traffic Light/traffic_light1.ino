@@ -12,13 +12,13 @@ void setup()
 }
 
 void loop(){
-  digitalWrite(12, HIGH); 
+  digitalWrite(GREEN_PIN, HIGH); 
   delay(15000); 
-  digitalWrite(12, LOW); 
-  digitalWrite(11, HIGH);
+  digitalWrite(GREEN_PIN, LOW); 
+  digitalWrite(YELLOW_PIN, HIGH);
   delay(5000);
-  digitalWrite(11, LOW);
-  digitalWrite(10, HIGH);
+  digitalWrite(YELLOW_PIN, LOW);
+  digitalWrite(RED_PIN, HIGH);
   delay(15000);
-  digitalWrite(10, LOW);
+  digitalWrite(RED_PIN, LOW);
 }
