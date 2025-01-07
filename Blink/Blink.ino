@@ -1,23 +1,23 @@
-/*
-	Programador.......: (C) Diogo Ramiro
-    Data..............: 11/12/2024
-    Observações.......: 2º Lab
-    
-    Inbuilt Led Control
-*/
-//Constantes
-const int PINO_LED = 7;
-const int WAIT_TIME_MS= 500;
 
 
-//Inicializações
-void setup(void)	{
-  pinMode(PINO_LED, OUTPUT);
+const byte LED_PIN []= {4,5,6,7,8,9,10,11,12,13};
+
+void setup() {
+  for(byte i = 0; i <= 9; i++) {
+    pinMode(LED_PIN[i], OUTPUT);
+  }
+  
 }
 
-void loop (void)	{
-  digitalWrite(PINO_LED, HIGH);
-  delay (WAIT_TIME_MS);
-  digitalWrite(PINO_LED, LOW);
-  delay (WAIT_TIME_MS);
+void loop() {
+  for(byte i = 0; i<= 9; i++){
+    digitalWrite(LED_PIN[i], 1);
+    delay(100);
+    digitalWrite(LED_PIN[i],0);
+  }
+  for(int i = 9; i>= 0; i--){
+    digitalWrite(LED_PIN[i], 1);
+    delay(100);
+    digitalWrite(LED_PIN[i],0);
+  }
 }
